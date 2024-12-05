@@ -1,5 +1,5 @@
 name: Unit test on pull request
-run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
+run-name: ${{ github.actor }} runs unittest
 on: [pull_request]
 jobs:
   Explore-GitHub-Actions:
