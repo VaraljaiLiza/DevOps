@@ -1,3 +1,4 @@
+import sys
 import unittest
 
 class UnitTests(unittest.TestCase):
@@ -15,5 +16,8 @@ class MyClass:
     def get_name(self) -> str:
         return self._name
 
-x = MyClass("Váraljai Liza")
+if len(sys.argv)>1:
+    x = MyClass(sys.argv[1])
+else:
+    x = MyClass("Váraljai Liza")
 x.print()
