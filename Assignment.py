@@ -1,3 +1,9 @@
+import unittest
+
+class UnitTests(unittest.TestCase):
+    def test_assignment(self):
+        self.assertEqual(MyClass("teszt").get_name(), "teszt")
+
 class MyClass:
     _name = None
     def __init__(self, name) -> None:
