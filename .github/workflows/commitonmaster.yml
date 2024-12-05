@@ -1,0 +1,21 @@
+name: Unit and integration test on commit on master
+run-name: ${{ github.actor }} runs unit and integration tests
+on:
+  push:
+    branches:
+      - 'main'
+jobs:
+  Commit-On-Master:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+      - name: Run unit test
+        run: |
+          python -m unittest Assignment
+      - name: Run integration test
+        run: |
+          python Assignment.py "Integration test successful"
